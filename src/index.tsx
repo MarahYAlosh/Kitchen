@@ -17,13 +17,14 @@ import SpecialArea from "./pages/SpecialArea";
 import SpecialCategory from "./pages/SpecialCategory";
 import SpecialIngredients from "./pages/SpecialIngredients";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      { index: true, element: <App /> },
-      { path: "/", element: <App /> },
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { index: true, element: <App /> },
+        { path: "/", element: <App /> },
       { path: "search/:term", element: <Search /> },
       { path: "recipe/:id", element: <Recipes /> },
       { path: "/ingredients", element: <Ingredients />, children: [{ path: ":ingredient", element: <SpecialIngredients /> }] },
@@ -32,7 +33,9 @@ const router = createBrowserRouter([
       { path: "*", element: <NotFound /> },
     ],
   },
-]);
+],
+  { basename: "/Kitchen" }
+);
 
 const queryClient = new QueryClient();
 
