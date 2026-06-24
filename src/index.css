@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    @apply min-w-full min-h-screen flex flex-col justify-between items-center;
+    background-color: #0f1117;
+    color: #e2e8f0;
+  }
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: #f59e0b;
+  }
+  .text-emerald-custom {
+    color: #10b981;
+  }
+  .bg-dark {
+    background-color: #0f1117;
+  }
+  .bg-dark-card {
+    background-color: #1a1f2e;
+  }
+  .bg-dark-surface {
+    background-color: #141824;
+  }
+  .border-gold {
+    border-color: #f59e0b;
+  }
+  .glow-emerald {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+}
